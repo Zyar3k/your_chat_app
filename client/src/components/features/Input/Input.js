@@ -1,6 +1,6 @@
 import React from 'react';
 import './Input.scss';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 const Input = ({ message, sendMessage, setMessage }) => (
 <form>
