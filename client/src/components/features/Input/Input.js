@@ -3,15 +3,16 @@ import './Input.scss';
 // import { Link } from 'react-router-dom';
 
 const Input = ({ message, sendMessage, setMessage }) => (
-<form>
+<form className='form'>
   <input
+  className='input'
   type='text'
   placeholder='wpisz coś'
   value={message}
   onChange={(event) => setMessage(event.target.value)}
   onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
   />
-  <button onClick={(event) => sendMessage(event)}>
+  <button button='sendButton' onClick={(event) => sendMessage(event)}>
     wyślij
   </button>
 </form>

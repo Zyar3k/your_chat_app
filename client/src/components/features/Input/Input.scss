@@ -1,0 +1,32 @@
+.form {
+  display: flex;
+  border-top: 2px solid #182825;
+  width: 100%;
+
+  .input {
+    border: none;
+    border-radius: 0;
+    padding: 3%;
+    width: 80%;
+    font-size: 18px;
+  }
+
+  input:focus, textarea:focus, select:focus{
+    outline: none;
+  }
+
+  button {
+    text-transform: uppercase;
+    text-decoration: none;
+    width: 20%;
+    display: inline-block;
+    border: none;
+    padding: 20px;
+    color: #fff;
+    background: #016fb9;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      background: #22aed1;
+    }
+  }
+}
