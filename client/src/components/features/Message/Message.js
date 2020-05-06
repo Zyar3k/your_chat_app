@@ -14,19 +14,19 @@ const Message = ({ message: { user, text }, name }) => {
   return(
     currentUserSent
     ?  (
-      <div>
-        <p>{trimmedName}</p>
-        <div>
-          <p>{ReactEmoji.emojify(text)}</p>
+      <div className='messageContainer justifyEnd'>
+        <p className='sentText mr-10'>{trimmedName}</p>
+        <div className='messageBox backgroundBlue'>
+          <p className='messageText colorWhite'>{ReactEmoji.emojify(text)}</p>
         </div>
       </div>
     )
     :  (
-      <div>
-        <div>
-          <p>{ReactEmoji.emojify(text)}</p>
+      <div className='messageContainer justifyStart'>
+        <div className='messageBox backgroundLight'>
+          <p className='messageText colorDark'>{ReactEmoji.emojify(text)}</p>
         </div>
-        <p>{user}</p>
+        <p className='sentText ml-10'>{user}</p>
       </div>
     )
   );

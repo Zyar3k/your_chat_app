@@ -4,7 +4,7 @@ import ScrollToBotoom from 'react-scroll-to-bottom';
 import Message from '../Message/Message';
 
 const Messages = ({ messages, name }) => (
-  <ScrollToBotoom>
+  <ScrollToBotoom className="messages">
     {messages.map((message, index) => <div key={index}><Message message={message} name={name} /></div>)}
   </ScrollToBotoom>
 );
