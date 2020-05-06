@@ -4,6 +4,7 @@ import queryString from 'query-string';
 import './Chat.scss';
 import Topbar from '../features/Topbar/Topbar';
 import Input from '../features/Input/Input';
+import Messages from '../features/Messages/Messages';
 
 let socket;
 
@@ -55,6 +56,7 @@ const Chat = ({ location }) => {
     <div>
       <div>
         <Topbar room={room} />
+        <Messages name={name} messages={messages} />
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />
         
       </div>
