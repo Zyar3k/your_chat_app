@@ -53,8 +53,8 @@ const Chat = ({ location }) => {
   console.log(messages, message)
 
   return(
-    <div>
-      <div>
+    <div className='chat'>
+      <div className='chatContainer'>
         <Topbar room={room} />
         <Messages name={name} messages={messages} />
         <Input message={message} setMessage={setMessage} sendMessage={sendMessage} />

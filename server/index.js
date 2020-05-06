@@ -22,7 +22,7 @@ io.on('connection', (socket) => {
 
     if(error) return callback(error);
 
-    socket.emit('message', { user: 'szef', text: `${user.name}, witaj wreszcie w pokoju ${user.room}`});
+    socket.emit('message', { user: 'szef', text: `${user.name}, witaj w pokoju ${user.room}`});
 
     socket.broadcast.to(user.room).emit('message', { user: 'szef', text: `${user.name}, wreszie się pojawił :)`})
 

@@ -3,16 +3,12 @@ import './Topbar.scss';
 import { Link } from 'react-router-dom';
 
 const Topbar = ({ room }) => (
-<div>
-  <div>
-    <div>ON!</div>
-    <div>{room}</div>
-  </div>
-  <div>
-    <Link to='/'>
-      X
-    </Link>
-  </div>
+<div className='topbar'>
+  <div className='dot active'></div>
+  <div>{room}</div>
+  <Link to='/'>
+    <div className='dot out'></div>
+  </Link>
 </div>
 
 );

@@ -1,0 +1,42 @@
+.chat {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #c9b79c;
+
+  .chatContainer {
+    background: #f1e0c5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    height: 60%;
+    width: 35%;
+  }
+}
+
+@media(max-width: 1024px) {
+  .chat {
+    .chatContainer {
+      width: 60%;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  .chat {
+    .chatContainer {
+      width: 60%;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .chat {
+    .chatContainer {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

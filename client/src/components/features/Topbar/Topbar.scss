@@ -1,0 +1,30 @@
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #182825;
+  border-radius: 5px 5px 0 0;
+  height: 60px;
+  width: 100%;
+  color: wheat;
+  padding: 0 20px;
+
+  .dot {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+
+    &.active {
+      background: yellowgreen;
+    }
+
+    &.out {
+      background: #ba1b1d;
+      transition: 0.8s ease-in-out;
+
+      &:hover {
+        background: red;
+      }
+    }
+  }
+}
