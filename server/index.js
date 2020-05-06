@@ -40,9 +40,12 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    console.log('User had left :( ')
-  });
+    const user = removeUser(socket.id);
 
+    if(user) {
+      io.to(user.room).emit('message', { user: 'szef', text: `Użytkownik ${user.name} opuścił pokój`})
+    }
+  });
 });
 
 
