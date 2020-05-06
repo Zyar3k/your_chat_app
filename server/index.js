@@ -22,8 +22,21 @@ io.on('connection', (socket) => {
 
     if(error) return callback(error);
 
+    socket.emit('message', { user: 'szef', text: `${user.name}, witaj wreszcie w pokoju ${user.room}`});
+
+    socket.broadcast.to(user.room).emit('message', { user: 'szef', text: `${user.name}, wreszie się pojawił :)`})
+
     socket.join(user.room);
     
+    callback();
+  });
+
+  socket.on('sendMessage', (message, callback) => {
+    const user = getUser(socket.id);
+
+    io.to(user.room).emit('message', { user: user.name, text: message });
+
+    callback();
   });
 
   socket.on('disconnect', () => {
