@@ -15,6 +15,6 @@ const Topbar = ({ room }) => (
   </div>
 </div>
 
-)
+);
 
 export default Topbar;
