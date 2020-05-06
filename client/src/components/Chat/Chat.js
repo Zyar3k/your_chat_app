@@ -35,17 +35,31 @@ const Chat = ({ location }) => {
   useEffect(() => {
     socket.on('message', (message) => {
       setMessages([...messages, message]);
-    });
+    })
   }, [messages]);
 
-  // sendMessage = () => {
+  const sendMessage = (event) => {
+    event.preventDefault();
 
-  // };
+    if (message) {
+      socket.emit('sendMessage', message, () => setMessage(''));
+    }
+
+  };
+
+  // console.log(messages, message)
 
   return(
-    <h1>
-      Chat
-    </h1>
+    <div>
+      <div>
+        <input
+        value={message}
+        onChange={(event) => setMessage(event.target.value)}
+
+        onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
+        />
+      </div>
+    </div>
   )
 };
 
