@@ -1,6 +1,6 @@
 # @cz@-app
 
-### [LIVE DEMO](https://youthful-clarke-0b8301.netlify.app/)
+### [LIVE DEMO](https://czat-appka.netlify.app/)
 
 > Chat application from scratch - server and client
 ##### Used in project
